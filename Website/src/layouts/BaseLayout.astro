@@ -1,0 +1,192 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Minecraft Server" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <title>{title}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <slot />
+  
+  <style is:global>
+    /* Industrial Age Theme Variables */
+    :root {
+      /* Base Colors */
+      --color-coal: #1a1614;
+      --color-iron: #2a2522;
+      --color-steel: #3a3330;
+      --color-brass: #c9a961;
+      --color-copper: #b87333;
+      --color-bronze: #cd7f32;
+      --color-rust: #b7410e;
+      --color-steam: #d4d4d4;
+      --color-smoke: #6b6b6b;
+      --color-gold: #d4af37;
+      
+      /* Semantic Colors - Dark Theme (Industrial) */
+      --bg-primary: var(--color-coal);
+      --bg-secondary: var(--color-iron);
+      --bg-tertiary: var(--color-steel);
+      --text-primary: var(--color-steam);
+      --text-secondary: var(--color-smoke);
+      --accent-primary: var(--color-brass);
+      --accent-secondary: var(--color-copper);
+      --accent-tertiary: var(--color-bronze);
+      --border-color: rgba(201, 169, 97, 0.2);
+      --shadow-color: rgba(0, 0, 0, 0.6);
+      --glow-color: rgba(201, 169, 97, 0.15);
+      
+      /* Special Effects */
+      --gradient-industrial: linear-gradient(135deg, var(--color-brass) 0%, var(--color-copper) 50%, var(--color-bronze) 100%);
+      --gradient-steam: linear-gradient(180deg, rgba(212, 212, 212, 0.1) 0%, transparent 100%);
+      
+      /* Typography */
+      --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --weight-regular: 400;
+      --weight-medium: 500;
+      --weight-semibold: 600;
+      --weight-bold: 700;
+      --weight-extrabold: 800;
+      
+      /* Spacing */
+      --space-xs: 0.5rem;
+      --space-sm: 1rem;
+      --space-md: 1.5rem;
+      --space-lg: 2rem;
+      --space-xl: 3rem;
+      --space-2xl: 4rem;
+      --space-3xl: 6rem;
+      
+      /* Border Radius */
+      --radius-sm: 4px;
+      --radius-md: 8px;
+      --radius-lg: 12px;
+      --radius-xl: 16px;
+      --radius-2xl: 24px;
+      
+      /* Transitions */
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.3s ease;
+      --transition-slow: 0.5s ease;
+    }
+
+    [data-theme="light"] {
+      /* Light Theme - Parchment/Blueprint Style */
+      --color-parchment: #f4e8d0;
+      --color-paper: #faf5e8;
+      --color-ink: #2d2520;
+      --color-blueprint: #e8eff5;
+      
+      --bg-primary: var(--color-paper);
+      --bg-secondary: var(--color-parchment);
+      --bg-tertiary: var(--color-blueprint);
+      --text-primary: var(--color-ink);
+      --text-secondary: #5a5047;
+      --accent-primary: var(--color-rust);
+      --accent-secondary: var(--color-bronze);
+      --accent-tertiary: var(--color-brass);
+      --border-color: rgba(183, 65, 14, 0.3);
+      --shadow-color: rgba(45, 37, 32, 0.1);
+      --glow-color: rgba(183, 65, 14, 0.08);
+      
+      --gradient-industrial: linear-gradient(135deg, var(--color-rust) 0%, var(--color-bronze) 50%, var(--color-brass) 100%);
+      --gradient-steam: linear-gradient(180deg, rgba(45, 37, 32, 0.05) 0%, transparent 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-primary);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      transition: background-color var(--transition-base), color var(--transition-base);
+      min-height: 100vh;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(201, 169, 97, 0.03) 2px, rgba(201, 169, 97, 0.03) 4px);
+    }
+
+    [data-theme="light"] body {
+      background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(45, 37, 32, 0.02) 2px, rgba(45, 37, 32, 0.02) 4px);
+    }
+
+    a {
+      color: var(--accent-primary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    a:hover {
+      color: var(--accent-secondary);
+    }
+  </style>
+
+  <script>
+    // Theme toggle functionality
+    const getTheme = () => {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+        return localStorage.getItem('theme');
+      }
+      return 'dark';
+    };
+
+    const setTheme = (theme: string) => {
+      document.documentElement.setAttribute('data-theme', theme);
+      localStorage.setItem('theme', theme);
+    };
+
+    // Initialize theme
+    setTheme(getTheme()!);
+
+    // Listen for theme toggle
+    document.addEventListener('theme-toggle', () => {
+      const currentTheme = getTheme();
+      const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+    });
+
+    // Language functionality
+    const getLanguage = () => {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem('language')) {
+        return localStorage.getItem('language');
+      }
+      return 'en';
+    };
+
+    const setLanguage = (lang: string) => {
+      localStorage.setItem('language', lang);
+      document.dispatchEvent(new CustomEvent('language-change', { detail: { language: lang } }));
+    };
+
+    // Initialize language
+    const currentLang = getLanguage();
+    document.documentElement.setAttribute('lang', currentLang!);
+
+    // Listen for language toggle
+    document.addEventListener('language-toggle', (e: any) => {
+      setLanguage(e.detail.language);
+    });
+  </script>
+</body>
+</html>

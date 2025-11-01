@@ -1,11 +1,1098 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Industrial Roleplay - Modded Survival Server">
+  <Header />
+  
+  <main class="main">
+    <section class="hero">
+      <div class="hero-background"></div>
+      <div class="hero-decoration">
+        <div class="gear gear-1">⚙</div>
+        <div class="gear gear-2">⚙</div>
+        <div class="gear gear-3">⚙</div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="badge ornate" data-en="⚙ Industrial Age • Est. 1850" data-de="⚙ Industriezeitalter • Est. 1850">
+            <span class="badge-icon">⚙</span>
+            <span>Industrial Age • Est. 1850</span>
+          </div>
+          <h1 class="hero-title" data-en="Forge Your Industrial Empire" data-de="Erschaffe dein Industrielles Imperium">
+            Forge Your Industrial Empire
+          </h1>
+          <p class="hero-subtitle" data-en="Build infrastructure, shape politics, and dominate the economy in our modded survival roleplay server" data-de="Baue Infrastruktur, gestalte Politik und dominiere die Wirtschaft auf unserem modifizierten Survival-Roleplay-Server">
+            Build infrastructure, shape politics, and dominate the economy in our modded survival roleplay server
+          </p>
+          <div class="server-info">
+            <div class="info-card info-primary">
+              <span class="label" data-en="Server Address" data-de="Server-Adresse">Server Address</span>
+              <code class="server-ip">play.yourserver.com</code>
+            </div>
+            <div class="info-card info-secondary">
+              <span class="label" data-en="Modpack" data-de="Modpack">Modpack</span>
+              <span class="value">Industrial v2.1</span>
+            </div>
+            <div class="info-card info-accent">
+              <span class="label" data-en="Citizens Online" data-de="Bürger Online">Citizens Online</span>
+              <span class="value status-online">24/100</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="carousel-section">
+      <div class="container">
+        <h2 class="section-title-showcase" data-en="⚙ Server Showcase" data-de="⚙ Server-Präsentation">
+          <span>⚙ Server Showcase</span>
+        </h2>
+        <div class="carousel-wrapper">
+            <div class="carousel">
+              <div class="carousel-track">
+                <div class="carousel-item active">
+                  <div class="carousel-placeholder">
+                    <div class="placeholder-content">
+                      <div class="placeholder-icon">🏭</div>
+                      <h3>Industrial Districts</h3>
+                      <p data-en="Massive factories and production lines" data-de="Riesige Fabriken und Produktionslinien">
+                        Massive factories and production lines
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-placeholder">
+                    <div class="placeholder-content">
+                      <div class="placeholder-icon">🚂</div>
+                      <h3>Railway Networks</h3>
+                      <p data-en="Connect cities with advanced logistics" data-de="Verbinde Städte mit fortschrittlicher Logistik">
+                        Connect cities with advanced logistics
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-placeholder">
+                    <div class="placeholder-content">
+                      <div class="placeholder-icon">🏛️</div>
+                      <h3>Political Capitals</h3>
+                      <p data-en="Centers of power and decision-making" data-de="Zentren der Macht und Entscheidungsfindung">
+                        Centers of power and decision-making
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="carousel-placeholder">
+                    <div class="placeholder-content">
+                      <div class="placeholder-icon">💰</div>
+                      <h3>Trade Hubs</h3>
+                      <p data-en="Bustling markets and economic centers" data-de="Geschäftige Märkte und Wirtschaftszentren">
+                        Bustling markets and economic centers
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-btn prev" aria-label="Previous">‹</button>
+              <button class="carousel-btn next" aria-label="Next">›</button>
+            </div>
+            
+            <div class="carousel-indicators">
+              <button class="indicator active" data-index="0">
+                <span class="indicator-label">01</span>
+              </button>
+              <button class="indicator" data-index="1">
+                <span class="indicator-label">02</span>
+              </button>
+              <button class="indicator" data-index="2">
+                <span class="indicator-label">03</span>
+              </button>
+              <button class="indicator" data-index="3">
+                <span class="indicator-label">04</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-icon">👤</div>
+            <div class="stat-value">1,234</div>
+            <div class="stat-label" data-en="Total Players" data-de="Spieler Gesamt">Total Players</div>
+          </div>
+          <div class="stat-item stat-highlight">
+            <div class="stat-icon">🏗️</div>
+            <div class="stat-value">5,678</div>
+            <div class="stat-label" data-en="Buildings Created" data-de="Gebäude Erstellt">Buildings Created</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">💰</div>
+            <div class="stat-value">$2.4M</div>
+            <div class="stat-label" data-en="Economy Value" data-de="Wirtschaftswert">Economy Value</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">🎉</div>
+            <div class="stat-value">156</div>
+            <div class="stat-label" data-en="Events Hosted" data-de="Events Veranstaltet">Events Hosted</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title" data-en="Server Features" data-de="Server-Features">Server Features</h2>
+        <div class="features-grid">
+          <div class="feature-card feature-large">
+            <div class="feature-number">01</div>
+            <div class="feature-icon">🏰</div>
+            <h3 data-en="Survival Mode" data-de="Überlebensmodus">Survival Mode</h3>
+            <p data-en="Experience classic Minecraft survival with a friendly community" data-de="Erlebe klassisches Minecraft-Überleben mit einer freundlichen Community">
+              Experience classic Minecraft survival with a friendly community
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-number">02</div>
+            <div class="feature-icon">⚔️</div>
+            <h3 data-en="Custom Events" data-de="Custom-Events">Custom Events</h3>
+            <p data-en="Regular events and competitions with exciting rewards" data-de="Regelmäßige Events und Wettbewerbe mit spannenden Belohnungen">
+              Regular events and competitions with exciting rewards
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-number">03</div>
+            <div class="feature-icon">🛡️</div>
+            <h3 data-en="Protected Builds" data-de="Geschützte Bauten">Protected Builds</h3>
+            <p data-en="Keep your creations safe with our land protection system" data-de="Schütze deine Kreationen mit unserem Land-Schutzsystem">
+              Keep your creations safe with our land protection system
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-number">04</div>
+            <div class="feature-icon">💎</div>
+            <h3 data-en="Economy System" data-de="Wirtschaftssystem">Economy System</h3>
+            <p data-en="Trade with players and build your wealth" data-de="Handle mit Spielern und baue deinen Wohlstand auf">
+              Trade with players and build your wealth
+            </p>
+          </div>
+          <div class="feature-card feature-wide">
+            <div class="feature-number">05</div>
+            <div class="feature-icon">🎮</div>
+            <h3 data-en="Mini Games" data-de="Mini-Spiele">Mini Games</h3>
+            <p data-en="Enjoy various mini-games when you need a break from survival" data-de="Genieße verschiedene Mini-Spiele, wenn du eine Pause vom Überleben brauchst">
+              Enjoy various mini-games when you need a break from survival
+            </p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-number">06</div>
+            <div class="feature-icon">👥</div>
+            <h3 data-en="Active Staff" data-de="Aktives Team">Active Staff</h3>
+            <p data-en="Helpful and dedicated staff members always available" data-de="Hilfsbereite und engagierte Teammitglieder sind immer verfügbar">
+              Helpful and dedicated staff members always available
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="cta-background-pattern"></div>
+      <div class="cta-glow"></div>
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-badge">⚡ Join Today</div>
+          <h2 data-en="Ready to Join?" data-de="Bereit beizutreten?">Ready to Join?</h2>
+          <p data-en="Connect now and become part of our growing community!" data-de="Verbinde dich jetzt und werde Teil unserer wachsenden Community!">
+            Connect now and become part of our growing community!
+          </p>
+          <button class="cta-button" data-en="Copy Server IP" data-de="Server-IP kopieren">
+            <span class="button-text">Copy Server IP</span>
+            <span class="button-icon">📋</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+
+  <style>
+    .main {
+      min-height: calc(100vh - 200px);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 3rem;
+    }
+
+    .hero {
+      position: relative;
+      padding: 6rem 0 8rem;
+      overflow: hidden;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(201, 169, 97, 0.15), transparent),
+        radial-gradient(circle at 100% 100%, rgba(184, 115, 51, 0.1), transparent);
+    }
+
+    .hero-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(201, 169, 97, 0.02) 100px, rgba(201, 169, 97, 0.02) 200px);
+      z-index: 0;
+    }
+
+    .hero-decoration {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    .gear {
+      position: absolute;
+      font-size: 8rem;
+      color: var(--accent-primary);
+      filter: drop-shadow(0 0 20px var(--glow-color));
+    }
+
+    .gear-1 {
+      top: 10%;
+      right: 15%;
+      animation: rotateClockwise 30s linear infinite;
+    }
+
+    .gear-2 {
+      top: 40%;
+      right: 5%;
+      font-size: 12rem;
+      animation: rotateCounterClockwise 40s linear infinite;
+    }
+
+    .gear-3 {
+      bottom: 15%;
+      right: 25%;
+      font-size: 6rem;
+      animation: rotateClockwise 25s linear infinite;
+    }
+
+    @keyframes rotateClockwise {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes rotateCounterClockwise {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      text-align: left;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-tertiary);
+      border: 2px solid var(--accent-primary);
+      padding: 0.625rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px var(--glow-color);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      position: relative;
+    }
+
+    .badge::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border: 2px solid var(--accent-primary);
+      border-radius: 50px;
+      opacity: 0.3;
+      animation: badgePulse 2s ease-in-out infinite;
+    }
+
+    @keyframes badgePulse {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.05); opacity: 0; }
+    }
+
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      background: var(--gradient-industrial);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 4px 20px var(--glow-color);
+      position: relative;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+      font-weight: 500;
+      line-height: 1.8;
+      max-width: 650px;
+    }
+
+    .server-info {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 1rem;
+      max-width: 900px;
+    }
+
+    .info-card {
+      background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.625rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-primary {
+      background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-secondary));
+    }
+
+    .info-secondary {
+      border-style: dashed;
+    }
+
+    .info-accent {
+      background: linear-gradient(135deg, rgba(201, 169, 97, 0.08), var(--bg-secondary));
+    }
+
+    @media (max-width: 768px) {
+      .server-info {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .info-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.1), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .info-card:hover::before {
+      left: 100%;
+    }
+
+    .info-card:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: var(--accent-primary);
+      box-shadow: 0 12px 40px var(--glow-color), 0 0 0 1px var(--accent-primary);
+    }
+
+    .label {
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+    }
+
+    .server-ip {
+      background: var(--bg-tertiary);
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      font-family: 'JetBrains Mono', 'Courier New', monospace;
+      font-size: 1.125rem;
+      color: var(--accent-primary);
+      border: 1px solid var(--border-color);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .status-online {
+      color: var(--accent-primary);
+    }
+
+    .carousel-section {
+      padding: 6rem 0;
+      background: 
+        linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+      position: relative;
+    }
+
+    .carousel-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: var(--gradient-industrial);
+      opacity: 0.3;
+    }
+
+    .section-title-showcase {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 4rem;
+      color: var(--text-primary);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .section-title-showcase::before,
+    .section-title-showcase::after {
+      content: '';
+      flex: 1;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--accent-primary), transparent);
+      max-width: 200px;
+    }
+
+    .section-title-showcase::before {
+      background: linear-gradient(to left, var(--accent-primary), transparent);
+    }
+
+    .section-title-showcase::after {
+      background: linear-gradient(to right, var(--accent-primary), transparent);
+    }
+
+    .carousel {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      aspect-ratio: 16/9;
+      background: var(--bg-tertiary);
+      border: 3px solid var(--border-color);
+      box-shadow: 0 20px 60px var(--shadow-color);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 100%;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      height: 100%;
+      display: none;
+    }
+
+    .carousel-item.active {
+      display: block;
+    }
+
+    .carousel-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+      color: var(--text-secondary);
+    }
+
+    .placeholder-icon {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+      opacity: 0.5;
+    }
+
+    .carousel-placeholder p {
+      font-size: 1.25rem;
+      font-weight: 600;
+      opacity: 0.6;
+    }
+
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(26, 22, 20, 0.9);
+      border: 2px solid var(--accent-primary);
+      color: var(--accent-primary);
+      font-size: 2rem;
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+      font-weight: 700;
+    }
+
+    [data-theme="light"] .carousel-btn {
+      background: rgba(244, 232, 208, 0.95);
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+    }
+
+    .carousel-btn:hover {
+      background: var(--accent-primary);
+      color: var(--bg-primary);
+      transform: translateY(-50%) scale(1.15);
+      box-shadow: 0 8px 24px var(--glow-color);
+    }
+
+    .carousel-btn.prev {
+      left: 1.5rem;
+    }
+
+    .carousel-btn.next {
+      right: 1.5rem;
+    }
+
+    .carousel-dots {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 0.75rem;
+      z-index: 10;
+    }
+
+    .dot {
+      width: 0.75rem;
+      height: 0.75rem;
+      border-radius: 50%;
+      background: var(--border-color);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot:hover {
+      background: var(--text-secondary);
+    }
+
+    .dot.active {
+      background: var(--accent-primary);
+      width: 2rem;
+      border-radius: 1rem;
+    }
+
+    .features {
+      padding: 7rem 0;
+      position: relative;
+      background: 
+        radial-gradient(circle at 0% 50%, rgba(201, 169, 97, 0.05), transparent 50%),
+        radial-gradient(circle at 100% 50%, rgba(184, 115, 51, 0.05), transparent 50%);
+    }
+
+    .section-title {
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 5rem;
+      color: var(--text-primary);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 4px;
+      background: var(--gradient-industrial);
+      border-radius: 2px;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 1.5rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      grid-auto-rows: minmax(200px, auto);
+    }
+
+    .feature-large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .feature-wide {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 1200px) {
+      .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .feature-large {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+
+    .feature-card {
+      background: var(--bg-secondary);
+      border: 2px solid var(--border-color);
+      border-radius: var(--radius-xl);
+      padding: 2rem 1.75rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .feature-number {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--accent-primary);
+      opacity: 0.1;
+      line-height: 1;
+      transition: all 0.4s ease;
+    }
+
+    .feature-card:hover .feature-number {
+      opacity: 0.2;
+      transform: scale(1.2);
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--gradient-industrial);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .feature-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: var(--gradient-industrial);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .feature-card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      border-color: var(--accent-primary);
+      box-shadow: 
+        0 20px 60px var(--glow-color),
+        0 0 0 1px var(--accent-primary);
+    }
+
+    .feature-card:hover::before {
+      opacity: 0.03;
+    }
+
+    .feature-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      filter: drop-shadow(0 0 10px var(--glow-color));
+    }
+
+    .feature-large .feature-icon {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card:hover .feature-icon {
+      transform: scale(1.15) rotate(12deg);
+      filter: drop-shadow(0 0 20px var(--glow-color));
+    }
+
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+      font-weight: 700;
+    }
+
+    .feature-card p {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    .cta {
+      position: relative;
+      background: var(--gradient-industrial);
+      padding: 8rem 0;
+      text-align: center;
+      overflow: hidden;
+      clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+      margin: 4rem 0;
+    }
+
+    .cta-background-pattern {
+      position: absolute;
+      inset: 0;
+      background: 
+        repeating-linear-gradient(45deg, transparent 0px, transparent 20px, rgba(0, 0, 0, 0.05) 20px, rgba(0, 0, 0, 0.05) 40px),
+        repeating-linear-gradient(-45deg, transparent 0px, transparent 20px, rgba(255, 255, 255, 0.03) 20px, rgba(255, 255, 255, 0.03) 40px);
+      opacity: 0.5;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      padding: 0.625rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 2rem;
+      backdrop-filter: blur(10px);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .cta-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1000px;
+      height: 1000px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+      animation: pulseGlow 6s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { 
+        transform: translate(-50%, -50%) scale(1); 
+        opacity: 0.3; 
+      }
+      50% { 
+        transform: translate(-50%, -50%) scale(1.2); 
+        opacity: 0.5; 
+      }
+    }
+
+    .cta h2 {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      color: white;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .cta p {
+      font-size: 1.5rem;
+      margin-bottom: 3rem;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 500;
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button {
+      background: var(--bg-primary);
+      color: var(--accent-primary);
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      padding: 1.5rem 3.5rem;
+      font-size: 1.25rem;
+      font-weight: 800;
+      border-radius: var(--radius-lg);
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .cta-button:hover::before {
+      opacity: 1;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .cta-button:active {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .button-icon {
+      font-size: 1.25rem;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover .button-icon {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.5rem;
+      }
+
+      .hero {
+        padding: 4rem 0 5rem;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 2.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.125rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-title {
+        font-size: 2.25rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-large,
+      .feature-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+      }
+
+      .cta h2 {
+        font-size: 2.5rem;
+      }
+
+      .cta p {
+        font-size: 1.125rem;
+      }
+
+      .cta-button {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.125rem;
+      }
+
+      .carousel-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+      }
+
+      .carousel-btn.prev {
+        left: 1rem;
+      }
+
+      .carousel-btn.next {
+        right: 1rem;
+      }
+    }
+  </style>
+
+  <script>
+    // Language switcher
+    const updateTranslations = () => {
+      const lang = localStorage.getItem('language') || 'en';
+      document.documentElement.setAttribute('lang', lang);
+      
+      document.querySelectorAll('[data-en][data-de]').forEach(el => {
+        const element = el as HTMLElement;
+        if (lang === 'en') {
+          element.textContent = element.getAttribute('data-en') || '';
+        } else {
+          element.textContent = element.getAttribute('data-de') || '';
+        }
+      });
+    };
+
+    // Initialize
+    updateTranslations();
+
+    // Listen for language changes
+    document.addEventListener('language-change', updateTranslations);
+
+    // Carousel functionality
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-item');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+
+    const showSlide = (index: number) => {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      currentSlide = index;
+    };
+
+    const nextSlide = () => {
+      const next = (currentSlide + 1) % slides.length;
+      showSlide(next);
+    };
+
+    const prevSlide = () => {
+      const prev = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    };
+
+    nextBtn?.addEventListener('click', nextSlide);
+    prevBtn?.addEventListener('click', prevSlide);
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+
+    // Auto-advance carousel
+    setInterval(nextSlide, 5000);
+
+    // Copy to clipboard functionality
+    const ctaButton = document.querySelector('.cta-button');
+    const buttonText = ctaButton?.querySelector('.button-text');
+    
+    ctaButton?.addEventListener('click', () => {
+      const serverIp = 'play.yourserver.com';
+      navigator.clipboard.writeText(serverIp).then(() => {
+        const originalText = buttonText?.textContent;
+        const lang = localStorage.getItem('language') || 'en';
+        if (buttonText) {
+          buttonText.textContent = lang === 'en' ? 'Copied!' : 'Kopiert!';
+        }
+        setTimeout(() => {
+          if (buttonText && originalText) {
+            buttonText.textContent = originalText;
+          }
+        }, 2000);
+      });
+    });
+  </script>
+</BaseLayout>

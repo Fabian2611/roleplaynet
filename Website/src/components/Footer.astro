@@ -1,0 +1,88 @@
+---
+---
+
+<footer class="footer">
+  <div class="container">
+    <p class="copyright">&copy; 2024 Minecraft Server. All rights reserved.</p>
+    <div class="links">
+      <a href="#discord">Discord</a>
+      <span class="separator">•</span>
+      <a href="#rules">Rules</a>
+      <span class="separator">•</span>
+      <a href="#wiki">Wiki</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bg-secondary);
+    border-top: 2px solid var(--accent-primary);
+    padding: 3rem 0 2rem;
+    margin-top: auto;
+    position: relative;
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-industrial);
+    opacity: 0.5;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .copyright {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .links a {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .links a:hover {
+    color: var(--accent-primary);
+    transform: translateY(-1px);
+  }
+
+  .separator {
+    color: var(--border-color);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+</style>
